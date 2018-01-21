@@ -2,6 +2,6 @@
 
 <ul>
   <% @doctors.each do |doctor| %>
-    <li><%= link_to doctor.name, doctor %></li>
+    <li><%= link_to doctor.name, doctor %>, <p><%= last_updated doctor %></p></li>
   <% end %>
 </ul>
