@@ -3,7 +3,15 @@
 <h1>Doctor Information</h1>
 
 <p>Name: <%= @doctor.name %></p>
-<p><%= last_updated @doctor %></p>
+
+<p>Appointments</p>
+<ul>
+  <% @doctor.appointments.each_with_index do |appointment, index| %>
+    <li>
+      Appointment # <%= index + 1 %> -- <strong>Patient Name:</strong> <%= appointment.patient.name %> -- <strong>Date & Time</strong>: <%= appointment.date.strftime("%B %d, %Y at %I:%M%p") %>
+    </li>
+  <% end %>
+</ul>
 
 <hr>
 
