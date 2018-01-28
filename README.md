@@ -12,4 +12,5 @@ Learning more MVC features/functionality for Ruby on Rails
 
 # Nested resource
 
-  - goal is to have /doctors/:doctor_id/patients
+  - goal is to have /patients/:patient_id/medicines route and form
+  - **To Do: add medicines model/controller and associate with patients - one-to-many**
