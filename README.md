@@ -9,3 +9,7 @@ Learning more MVC features/functionality for Ruby on Rails
   - doctor model with name
   - appointment model with date and doctor_id foreign key
   - doctor show.html.erb view with list of appointments
+
+# Nested resource
+
+  - goal is to have /doctors/:doctor_id/patients

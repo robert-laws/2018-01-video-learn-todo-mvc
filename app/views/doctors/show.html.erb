@@ -6,12 +6,18 @@
 
 <p>Appointments</p>
 <ul>
-  <% @doctor.appointments.each_with_index do |appointment, index| %>
-    <li>
-      Appointment # <%= index + 1 %> -- <strong>Patient Name:</strong> <%= appointment.patient.name %> -- <strong>Date & Time</strong>: <%= appointment.date.strftime("%B %d, %Y at %I:%M%p") %>
-    </li>
+  <% if @doctor.appointments.empty? %>
+    <li>No Appointments Scheduled</li>
+  <% else %>
+    <% @doctor.appointments.each_with_index do |appointment, index| %>    
+      <li>
+        Appointment # <%= index + 1 %> -- <strong>Patient Name:</strong> <%= appointment.patient.name %> -- <strong>Date & Time</strong>: <%= appointment.date.strftime("%B %d, %Y at %I:%M%p") %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
+
+<hr>
 
 <hr>
 

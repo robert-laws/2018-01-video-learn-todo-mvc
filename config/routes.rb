@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  
+
   resources :doctors, only: [:index, :show, :new]
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :doctors do
+    resources :patients
+  end
 end
